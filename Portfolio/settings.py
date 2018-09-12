@@ -11,11 +11,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')#drmhfc=ol4bveg6jy!+u9%()c8_i_fxp8kcep8mhh82u2(2z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'django.local'
+    'kevin.tweaks',
+    'myportfolio.nanoapp.io'
 ]
 
 
@@ -112,3 +112,4 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')

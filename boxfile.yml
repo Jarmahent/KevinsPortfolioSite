@@ -2,3 +2,19 @@ run.config:
   engine: python
   engine.config:
     runtime: python-3.6
+  extra_packages:
+    - nginx
+
+deploy.config:
+  extra_steps:
+    - python manage.py collectstatic --noinput --clear
+  before_live:
+    web.main:
+      - python manage.py migrate --fake-initial
+
+
+
+web.main:
+  start:
+    nginx: nginx -c /app/etc/nginx.conf
+    django: gunicorn -c /app/etc/gunicorn.py Portfolio.wsgi
