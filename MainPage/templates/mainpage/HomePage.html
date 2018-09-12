@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Kevin Hernandez</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="https://kevintweaks.net/static/images/fav96.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" media="all" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Kevin Hernandez Developer html css python javascript" />
+	<script type="application/x-javascript">
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+</head>
+
+<body>
+	<style>
+		.nice-text {
+			font-family: 'Nunito-Bold';
+			font-size: 3.5em;
+			text-transform: capitalize;
+			color: #393b3a;
+		}
+
+		@media only screen and (max-width: 500px) {
+			.col-md-2 {
+
+				padding: 0;
+
+			}
+			.center-enlarge {
+				font-size: 25px !important;
+				text-align: center;
+			}
+		}
+
+		.navbar {
+			margin-bottom: 0px;
+		}
+
+		#workpic:hover {
+			cursor: pointer;
+		}
+
+		#school:hover {
+			cursor: pointer;
+		}
+
+		.space-out {
+			padding: 5px;
+		}
+
+		@media (min-width: 992px) {
+			.col-md-3 {
+				width: 33%;
+			}
+		}
+
+		#info-me1 h1 {
+			margin-bottom: 10px
+		}
+	</style>
+	<!--start-header-section-->
+	<div class="header-section">
+		<div class="container">
+			<img style="box-shadow: 0px 0px 20px 3px;border-radius: 100px;" id="khernan" src="{% static "images/pfp.png" %}">
+			<h1><span style="color:#00cfbd">K</span>evin <span style="color:#00cfbd">H</span>ernandez</h1>
+			<p><u>I love to do web development and other fun stuff!</u></p>
+			<p><u>This site was written in Python using Django v2.1.1</u></p>
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="25ZYEZ6AN9Q9C">
+				<input type="image" src="https://i.imgur.com/JCw0sDe.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		</div>
+	</div>
+	<!--end header-section-->
+	<!--start-study-section-->
+	<div class="study-section">
+		<div class="container">
+			<div class="study-grids">
+				<div class="col-md-6 study-grid">
+					<h3 class="center-enlarge">Projects...</h3>
+					<div class="study1">
+						<p><a href="https://github.com/Jarmahent/ImageProcessingBot">&#9733;Image Processing Bot<label>( 2018 Python )</label></a></p>
+						<p><a href="https://github.com/Jarmahent/Clippy">&#9733;Clipboard App that saves recent copies<label>( 2016 Javascript/Electron )</label></a></p>
+						<p><a href="https://fullstack.network/i-built-a-car-that-is-being-controlled-by-the-twitch-chat-heres-how-25e9f02c42ab">Twitch.tv Controlled RC Car<label>( 2017 JS )</label></a></p>
+						<p><a href="https://github.com/Jarmahent/LeagueBot">League Of Legends summoner Look up bot for Discord<label>( 2017 JS )</label></a></p>
+						<p><a href="https://github.com/Jarmahent/DjangLoginSystem">Django Storefront Site with login system<label>( 2018 Python )</label></a></p>
+						<p><a href="http://rockzom.nanoapp.io/apirockzom">&#9733;Twitch.TV bot backend Rockzombot<label>( 2018 Python )</label></a></p>
+						<p><a href="https://github.com/Jarmahent/CircleCIApiWrapper">CircleCI API Wrapper for Python<label>( 2017 Python )</label></a></p>
+					</div>
+				</div>
+				<div class="col-md-6 study-grid">
+					<h3 class="center-enlarge">skills..<span>!</span></h3>
+
+					<div class="row">
+						<div class="col-xs-4 col-md-3">
+							<a href="https://python.org" title="Python3"><img class="space-out" src="{% static "images/pythonlogo.png" %}"></a>
+						</div>
+						<div class="col-xs-4 col-md-3">
+							<a href="https://github.com" title="Git"><img class="space-out" src="{% static "images/gitlogo.png" %}"></a>
+						</div>
+						<div class="col-xs-4 col-md-3">
+							<a href="http://flask.pocoo.org/" title="Flask"><img class="space-out" src="{% static "images/flasklogo.png" %}"></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4 col-md-3">
+							<img title="JavaScript" class="space-out" src="{% static "images/jslogo.png" %}">
+						</div>
+						<div class="col-xs-4 col-md-3">
+							<img title="HTML" class="space-out" src="{% static "images/htmllogo.png" %}">
+						</div>
+						<div class="col-xs-4 col-md-3">
+							<a href="https://www.djangoproject.com/" title="Django"><img class="space-out" src="{% static "images/djangologo.png" %}"></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4 col-md-3">
+							<a href="https://reactjs.org/" title="React"><img class="space-out" src="{% static "images/reactlogo.png" %}"></a>
+						</div>
+						<div class="col-xs-4 col-md-3">
+							<a href="https://nanobox.io" title="Nanobox Deployment"><img class="space-out" src="{% static "images/nanoboxlogo.png" %}"></a>
+						</div>
+						<div class="col-xs-4 col-md-3">
+							<a href="https://electronjs.org/" title="Electron"><img class="space-out" src="{% static "images/electronlogo.png" %}"></a>
+						</div>
+					</div>
+
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- End study section -->
+	<hr>
+	<!--  Start infome1 -->
+	<div class="container" id="info-me1">
+		<div class="row">
+			<div class="col-md-4" id="edu" style="text-align: center;">
+				<h1 class="nice-text">Education</h1>
+				<img id="school" src="https://kevintweaks.net/static/images/pgcc.png">
+				<h3>Prince Georges Community College</h3>
+			</div>
+			<div class="col-md-4" style="text-align: center;">
+				<h1 class="nice-text">Work</h1>
+				<img id="workpic" src="https://kevintweaks.net/static/images/cyt.png" style="box-shadow:0px 0px 20px 1px #00000069;border-radius: 100px;">
+				<h3>Cytonix</h3>
+			</div>
+			<div class="col-md-4" id="loc" style="text-align: center;">
+				<h1 class="nice-text">Location</h1>
+				<iframe frameborder="0" height="300" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ0dxJ6BDdt4kR_JLN_S5ezZg&key=AIzaSyAv1SAE4vV5mtpJLArIiQ4ucHdTHFGB6m0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<!-- End Infome1 -->
+	<hr>
+	<iframe src="https://profile-summary-for-github.com/user/jarmahent" height="1200px" width="100%"></iframe>
+	<script>
+		document.getElementById("workpic").addEventListener('click', function(e) {
+			location.href = "https://cytonix.com"
+		})
+		document.getElementById("school").addEventListener('click', function(e) {
+			location.href = "https://www.pgcc.edu/"
+		})
+	</script>
+</body>
+
+</html>
