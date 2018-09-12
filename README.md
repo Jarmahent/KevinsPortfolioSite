@@ -1,5 +1,5 @@
 # KevinsPortfolioSite
-This is the code behind (what will be) http://myportfolio.nanoapp.io/
+This is the code behind http://myportfolio.nanoapp.io/
 
 
 
