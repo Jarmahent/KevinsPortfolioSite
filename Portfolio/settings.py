@@ -68,8 +68,12 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gonano',
+        'USER': os.environ['DATA_PORTFOLIO_USER'],
+        'PASSWORD': os.environ['DATA_PORTFOLIO_NANOBOX_PASS'],
+        'HOST': os.environ['DATA_PORTFOLIO_HOST'],
+        'PORT': '3306'
     }
 }
 

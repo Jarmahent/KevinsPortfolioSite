@@ -6,11 +6,15 @@ run.config:
     - nginx
 
 deploy.config:
-  extra_steps:
-    - python manage.py collectstatic --noinput --clear
   before_live:
     web.main:
       - python manage.py migrate --fake-initial
+
+
+data.portfolio:
+  config:
+    event_scheduler: 'Off'
+  image: nanobox/mysql:5.7
 
 
 
