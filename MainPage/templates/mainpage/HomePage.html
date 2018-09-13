@@ -67,13 +67,24 @@
 		#info-me1 h1 {
 			margin-bottom: 10px
 		}
+
+		#adminlink{
+			text-decoration: none;
+			color: #393b3a;
+		}
 	</style>
 	<!--start-header-section-->
 	<div class="header-section">
 		<div class="container">
 			<img style="box-shadow: 0px 0px 20px 3px;border-radius: 100px;" id="khernan" src="{% static "images/pfp.png" %}">
 			<h1><span style="color:#00cfbd">K</span>evin <span style="color:#00cfbd">H</span>ernandez</h1>
-			<p><u>{{ items.intro_text|linebreaks }}</u></p>
+			<p><u>
+				{% if request.user.is_superuser %}
+					<a href="{% url 'ChangeForm' %}" id="adminlink">{{ items.intro_text|linebreaks }}</a>
+				{% else %}
+					{{ items.intro_text|linebreaks }}
+				{% endif %}
+			</u></p>
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="25ZYEZ6AN9Q9C">
@@ -90,7 +101,7 @@
 				<div class="col-md-6 study-grid">
 					<h3 class="center-enlarge">Projects...</h3>
 					<div class="study1">
-						<p><a href="https://github.com/Jarmahent/ImageProcessingBot">&#9733;Image Processing Bot<label>( 2018 Python )</label></a></p>
+						{{ items.project_one|safe }}
 						<p><a href="https://github.com/Jarmahent/Clippy">&#9733;Clipboard App that saves recent copies<label>( 2016 Javascript/Electron )</label></a></p>
 						<p><a href="https://fullstack.network/i-built-a-car-that-is-being-controlled-by-the-twitch-chat-heres-how-25e9f02c42ab">Twitch.tv Controlled RC Car<label>( 2017 JS )</label></a></p>
 						<p><a href="https://github.com/Jarmahent/LeagueBot">League Of Legends summoner Look up bot for Discord<label>( 2017 JS )</label></a></p>
