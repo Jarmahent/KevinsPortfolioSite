@@ -28,6 +28,9 @@ def ChangeForm(request):
             instance.save()
             return HttpResponseRedirect('/')
     else:
-        form = HomePageModelForm()
+        raw_template_info = HomePageInfo.objects.all()
+        serialized_info = loads(serializers.serialize("json", list(raw_template_info)))
+        info = serialized_info[0]["fields"]
+        form = HomePageModelForm(initial=info)
         print(form.errors)
     return render(request, 'EditHomePage/EditHomePage.html', {"form": form})
