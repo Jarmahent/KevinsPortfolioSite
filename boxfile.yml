@@ -9,6 +9,8 @@ deploy.config:
   before_live:
     web.main:
       - python manage.py migrate --fake-initial
+      #- echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('jarmahent', 'kjh7796@gmail.com', 'Laurh2335')" | python manage.py shell
+
 
 
 data.portfolio:

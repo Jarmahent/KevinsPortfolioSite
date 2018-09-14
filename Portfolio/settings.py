@@ -11,11 +11,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')#drmhfc=ol4bveg6jy!+u9%()c8_i_fxp8kcep8mhh82u2(2z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'nanobox.com',
-    'kevin.tweaks',
+    'kevinsportfolio.nanoapp.io',
+    'nanobox.net',
     'myportfolio.nanoapp.io'
 ]
 
